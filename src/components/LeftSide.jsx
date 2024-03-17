@@ -49,9 +49,12 @@ export default function LeftSide({ handleChange, handleClick, data }) {
         <p className={styles.temp}>
           {data.current ? data.current.temp_c : ""}&deg;C
         </p>
-        <p className={styles.status}>
-          {data.current ? data.current.condition.text : ""}
-        </p>
+        <div className={styles.condition}>
+          <img src={data.current ? data.current.condition.icon : ""} alt="" />
+          <p className={styles.status}>
+            {data.current ? data.current.condition.text : ""}
+          </p>
+        </div>
       </div>
     </div>
   );
