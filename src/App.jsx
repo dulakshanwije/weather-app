@@ -11,7 +11,7 @@ function App() {
     // preventDefault(e);
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=1441e34ca0ac498998a61303232909&q=${city}&days=2`
+        `http://api.weatherapi.com/v1/forecast.json?key=1441e34ca0ac498998a61303232909&q=${city}&days=3`
       )
       .then((res) => {
         setData(res.data);
@@ -30,7 +30,7 @@ function App() {
           handleClick={handleClick}
           data={data}
         />
-        <RightSide />
+        <RightSide data={data} />
       </div>
       {/* <label htmlFor="city">City: </label>
       <input
