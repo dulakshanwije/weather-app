@@ -8,8 +8,8 @@ export default function LeftSide({ handleChange, handleClick, data }) {
   const day_name = [
     "Sunday",
     "Monday",
-    "Wednesday",
     "Tuesday",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
