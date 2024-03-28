@@ -12,10 +12,13 @@ export default function ForecastBlock({ data }) {
   }, [data]);
   return (
     <div className={styles.container}>
-      {/* <img src={data ? data.day.condition.icon : ""} alt="" /> */}
-      <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="" />
+      <img src={data ? data.day.condition.icon : ""} alt="" />
       <p className={styles.day}>{day}</p>
-      <p className={styles.temp}>{data ? data.day.avgtemp_c : ""}&deg;C</p>
+      <p className={styles.temp}>
+        {data
+          ? `${data.day.maxtemp_c}\u00b0C / ${data.day.mintemp_c}\u00b0C`
+          : ""}
+      </p>
     </div>
   );
 }
