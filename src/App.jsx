@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     axios
       .get(
-        "http://api.weatherapi.com/v1/forecast.json?key=1441e34ca0ac498998a61303232909&q=Colombo&days=3"
+        "http://api.weatherapi.com/v1/forecast.json?key=[key]&q=Colombo&days=3"
       )
       .then((res) => {
         setData(res.data);
@@ -25,7 +25,7 @@ function App() {
     setLoading(true);
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=1441e34ca0ac498998a61303232909&q=${city}&days=3`
+        `http://api.weatherapi.com/v1/forecast.json?key=[key]&q=${city}&days=3`
       )
       .then((res) => {
         setData(res.data);
